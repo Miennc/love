@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://i.pinimg.com/564x/d2/e7/6e/d2e76e0db682b4045bb415abf6c04b3c.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/d2/e7/6e/d2e76e0db682b4045bb415abf6c04b3c.jpg"
+          type="image/x-icon">
     <title>love</title>
     <style>
         canvas {
@@ -18,7 +19,11 @@
     </style>
 </head>
 <body>
-<canvas id="heart"></canvas>
+
+<canvas id="heart">
+</canvas>
+
+<h1 style="color: white; position: absolute; top: 20%; left: 47%; z-index: 1000; " class="ani">Chị Tâm Anh </h1>
 
 <script>
     window.requestAnimationFrame =
@@ -111,6 +116,7 @@
             timeDelta: 0.01
         };
 
+
         var time = 0;
         var loop = function () {
             var n = -Math.cos(time);
@@ -163,9 +169,30 @@
         loop();
     };
 
+
     var s = document.readyState;
     if (s === 'complete' || s === 'loaded' || s === 'interactive') init();
     else document.addEventListener('DOMContentLoaded', init, false);
 </script>
 </body>
+
+<style>
+    @keyframes ex {
+        0% {
+            transform: scale(2);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(2);
+        }
+
+    }
+
+    h1 {
+        animation-name: ex;
+        animation: ex 2s infinite;
+    }
+</style>
 </html>
